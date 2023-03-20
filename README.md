@@ -1,4 +1,4 @@
-# Titel
+# OBA Progressive Enhancement Website
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
