@@ -1,22 +1,38 @@
 <%- include('./partials/head.ejs') %>
 
-<h1><%= squad.name %></h1>
+<main>
+    <section>
+        <h2> Waar ben je naar opzoek?</h2>
+        <div>
+            <input type="text" placeholder="Ik zoek.."> 
+            <button>
+                Zoek <span class="material-symbols-outlined">
+                    arrow_right
+                    </span>
+            </button>
+        </div>
+    </section>
 
-<% squad.members.forEach(member => { %>
+    <section>
+        <img src="/assets/content.png"  href="https://www.oba.nl/service/word-lid.html"> 
+        <p>
+            Maak kennis met verhalen in vele vormen. In jouw OBA vind je boeken om mee weg te kruipen, 
+            een theatervoorstelling waar je stil van wordt en voorleesuurtjes waar je niet over uitgepraat raakt. 
+        </p>
+    </section>
 
-  <article>
-    <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
-    <img src="<%= member.avatar != '' ? member.avatar :'/placeholder.jpg' %>" alt="De avatar van <%= member.name %>" />
-    <a href="/member/?id=<%= member.id %>"></a>
-  </article>
+    <section>
+        <h2>Onze nieuwste aanwinsten</h2>
+        <div>
+            <% results.forEach(result => { %>
+                <article>
+                    <h3><%= result.titles %></h3>
+                    <img src="<%= result.coverimages %>">
+                </article>
+            <% }) %>
+        </div>
+    </section>
 
-<% }) %>
-
-
-  <article>
-    <h2>Jouw kaartje hier?</h2>
-    <img src="/placeholder.jpg" alt="Jouw avatar hier?" />
-    <a href="/member/new?squad=<%= squad.id %>&"></a>
-  </article>
+</main>
 
 <%- include('./partials/foot.ejs') %>
