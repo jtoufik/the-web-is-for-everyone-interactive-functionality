@@ -23,25 +23,33 @@
 
     <section>      
         <h2>Onze nieuwste aanwinsten</h2>
-        <div>
-            <div>
-                <% for (let i= 0; i < results.length; i++){ %>
-                    <article>   
-                        <img src="<%= results[i].coverimages %>" alt="<%= results[i].frabl.key1 %>">
+
+        <ul class="book-list">
+            <% for (let i= 0; i < results.length; i++){ %>
+            <li class="book-list-item">
+                <article>   
+                    <img src="<%= results[i].coverimages %>" alt="<%= results[i].frabl.key1 %>">
+                    <div>
                         <div>
-                            <h3> <%= results[i].authorsDetailed.full %></h3> 
-                            <ul>
-                                <li><p>Auteur: <%= results[i].frabl.key2 %></p></li>
-                                <li><p>Genre: <%= results[i].genres %></p></li>
-                            </ul>
-                            <div class="detail-box">
-                                <button> Details</button>
-                            </div>
+                            <h3> <%= results[i].frabl.key1 %></h3> 
+                            <dl>
+                                <div>
+                                    <dt>Auteur:</dt> <dd><%= results[i].frabl.key2 %></dd>
+                                </div>
+                                <div>
+                                    <dt>Genre:</dt>
+                                    <dd> <%= results[i].genres %></dd>
+                                </div>
+                            </dl>
+                        </div>                            
+                        <div class="detail-box">
+                            <button class="btn-details"> Details</button>
                         </div>
-                    </article>
-                <% } %>
-            </div>
-        </div>
+                    </div>
+                </article>
+            </li>
+            <% } %> 
+        </ul>
     </section>
 
 </main>

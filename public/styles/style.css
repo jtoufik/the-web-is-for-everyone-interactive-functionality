@@ -49,14 +49,12 @@ header > section > img:nth-of-type(2){
 header > a:nth-of-type(1){
     display: flex;
     justify-content: flex-end;
-    transition: all .2s ease-in-out;
-    position: relative;
-    bottom: 1em;
+    color: black;
     font-weight: bold;
 }
 
 header > a:nth-of-type(1):hover{
-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 header > a:visited {
@@ -163,39 +161,50 @@ section:nth-of-type(2) > p{
 
 h3, h4{
     font-size: 16px;
-    max-width: 10em;
     margin: 0;
+}
+
+h4{
+    text-align: center;
+}
+
+h3{
+    text-align: left;
 }
 
 h4, article > p{
     font-weight: lighter;
     font-style: italic;
 }
-section:nth-of-type(3) h2{
-    margin-bottom: 2em;
-}
 
-section:nth-of-type(3)> div{
+.book-list{
+    display: flex;
+    flex-flow: row;
+    list-style: none;
     overflow: hidden;
     overflow: scroll;
     overflow-y: hidden;
     width: 100%;
-    margin-bottom: 3em;
-}
-
-section:nth-of-type(3)> div > div{
     gap: 1em;
-    display: flex;
-    flex-direction: row;
 }
 
 section:nth-of-type(3) article{
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
     display: flex;
-    flex: wrap;
-    width: 18em;
+    width: 24em;
+    height: 15em;
     padding: 1em;
+}
+
+section:nth-of-type(3) article > div{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+section:nth-of-type(3) article > div > div:nth-last-of-type(2){
+    flex-grow: 1;
 }
 
 section:nth-of-type(3) img{
@@ -204,9 +213,21 @@ section:nth-of-type(3) img{
     padding-right: 1em;
 }
 
-
-section:nth-of-type(3) ul{
+section:nth-of-type(3) dl{
     padding: 0;
+}
+
+dl > div{
+    display: flex;
+}
+
+dt{
+    font-weight: bolder;
+}
+
+dd{
+    margin: 0;
+    padding-left: 5px;
 }
 
 .detail-box{
@@ -214,11 +235,27 @@ section:nth-of-type(3) ul{
     justify-content: flex-end;
 }
 
-section:nth-of-type(3) button{
+.btn-details{
     background-color: black;
     color: white;
     border-style : none;
     padding: .5em 1.5em;
+
+}
+
+button, a{
+    transition: .2s ease-in-out;    
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+a:hover{
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 
@@ -245,6 +282,10 @@ footer section{
     width: 70%;
 }
 
+.title-footer{
+    text-align: left;
+}
+
 footer ul{
     padding: 0;
 }
@@ -253,10 +294,38 @@ footer a {
     color: white;
 }
 
+footer h3{
+    text-align: center;
+}
 
-/* footer > nav > ul:nth-of-type(3){
+footer > nav > div > ul{
+    display: flex;
+    gap: 2em;
+}
 
-} */
+.socials{
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+} 
+
+.icon-insta{
+    background-image: url(/assets/icons/instagram-icon.png);
+}
+
+.icon-youtube{
+    background-image: url(/assets/icons/youtube-icon.png);
+}
+
+.icon-twitter{
+    background-image: url(/assets/icons/twitter-icon.png);
+}
+
+.icon-facebook{
+    background-image: url(/assets/icons/facebook-icon.png);
+}
 
 
 /* ====================== MEDIA QUERY'S ====================== */
