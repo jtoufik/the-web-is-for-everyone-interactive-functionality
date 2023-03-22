@@ -1,6 +1,6 @@
 {
   "name": "the-web-is-for-everyone-interactive-functionality",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Ontwerp voor een opdrachtgever OBA met een interactieve toepassing die voor iedereen toegankelijk is",
   "main": "server.js",
   "type": "module",
@@ -11,12 +11,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
+  "keywords": [
+    "node",
+    "express",
+    "ejs",
+    "rest",
+    "api"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jtoufik/the-web-is-for-everyone-interactive-functionality.git"
   },
   "author": "M.J.Toufik <jalal.toufik@hva.nl>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jtoufik/the-web-is-for-everyone-interactive-functionality/issues"
   },

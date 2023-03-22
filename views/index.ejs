@@ -21,15 +21,26 @@
         </p>
     </section>
 
-    <section>
+    <section>      
         <h2>Onze nieuwste aanwinsten</h2>
         <div>
-            <% results.forEach(result => { %>
-                <article>
-                    <h3><%= result.titles %></h3>
-                    <img src="<%= result.coverimages %>">
-                </article>
-            <% }) %>
+            <div>
+                <% for (let i= 0; i < results.length; i++){ %>
+                    <article>   
+                        <img src="<%= results[i].coverimages %>" alt="<%= results[i].frabl.key1 %>">
+                        <div>
+                            <h3> <%= results[i].authorsDetailed.full %></h3> 
+                            <ul>
+                                <li><p>Auteur: <%= results[i].frabl.key2 %></p></li>
+                                <li><p>Genre: <%= results[i].genres %></p></li>
+                            </ul>
+                            <div class="detail-box">
+                                <button> Details</button>
+                            </div>
+                        </div>
+                    </article>
+                <% } %>
+            </div>
         </div>
     </section>
 

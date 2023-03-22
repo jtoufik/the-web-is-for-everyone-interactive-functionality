@@ -5,7 +5,7 @@ import indexRoute from './routes/index.js'
 const server = express()
 
 // Stel het poortnummer in
-server.set('port', process.env.PORT || 8001)
+server.set('port', process.env.PORT || 8000)
 
 
 // Stel de view engine in

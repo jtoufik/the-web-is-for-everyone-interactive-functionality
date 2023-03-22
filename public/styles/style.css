@@ -2,6 +2,7 @@
     --transparant: #0000;
     --shadow: .3rem;
     --border-color: #d6d6d6c3;
+    --bg-color: #f6f6f6;
     --primary-color: red;
 }
 
@@ -58,7 +59,7 @@ header > a:nth-of-type(1):hover{
 color: var(--primary-color);
 }
 
-a:visited {
+header > a:visited {
     color: black;
 }
 
@@ -77,8 +78,8 @@ header > nav > ul{
 
     border-top: solid 1px var(--border-color);
     border-bottom: solid 1px var(--border-color);
-    background: #ffffff;
-    background-image: linear-gradient(90deg,#ffffff 0%, #f6f6f6 50%, #ffffff 100%);
+    background: white;
+    background-image: linear-gradient(90deg, white 0%, var(--bg-color) 50%, white 100%);
 }
 
 header > nav > ul > li{
@@ -94,11 +95,10 @@ header > nav > ul > li:hover{
 /* ===================== MAIN ===================== */
 
 main{
-    width: 96%;
     margin: 0 auto;
 }
 
-main > section, article {
+main > section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,8 +109,6 @@ main > section, article {
 section > h2{
     text-align: center;
     font-size: 22px;
-    position: relative;
-    bottom: 0.6em;
 }
 
 main > section > div{
@@ -162,16 +160,67 @@ section:nth-of-type(2) > p{
 }
 
 /* Section books */
+
+h3, h4{
+    font-size: 16px;
+    max-width: 10em;
+    margin: 0;
+}
+
+h4, article > p{
+    font-weight: lighter;
+    font-style: italic;
+}
+section:nth-of-type(3) h2{
+    margin-bottom: 2em;
+}
+
 section:nth-of-type(3)> div{
+    overflow: hidden;
+    overflow: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+section:nth-of-type(3)> div > div{
+    gap: 1em;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 6em;
-    overflow: hidden;
-    width: 70%;
-    margin: 0 auto;
 }
+
+section:nth-of-type(3) article{
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex: wrap;
+    width: 18em;
+    padding: 1em;
+}
+
+section:nth-of-type(3) img{
+    width: 7em;
+    height: 9em;
+    padding-right: 1em;
+}
+
+
+section:nth-of-type(3) ul{
+    padding: 0;
+}
+
+.detail-box{
+    display: flex;
+    justify-content: flex-end;
+}
+
+section:nth-of-type(3) button{
+    background-color: black;
+    color: white;
+    border-style : none;
+    padding: .5em 1.5em;
+}
+
 
 /* ===================== FOOTER ===================== */
 
@@ -182,9 +231,28 @@ footer{
 
 footer > nav{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    padding: 2em;
 }
+
+footer section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+footer ul{
+    padding: 0;
+}
+
+footer a {
+    color: white;
+}
+
 
 /* footer > nav > ul:nth-of-type(3){
 
@@ -230,8 +298,8 @@ footer > nav{
         width: 20em;
     }
 
-    section:nth-of-type(2) > img{
-        width: 90%;
+    footer section{
+        width: 50%;
     }
 
 }
@@ -252,9 +320,6 @@ footer > nav{
         width: 25em;
     }
 
-    section:nth-of-type(2) > img{
-        width: 90%;
-    }
 }
 
 /* Extra Large screen 1400px */
@@ -273,7 +338,7 @@ footer > nav{
         width: 25em;
     }
 
-    section:nth-of-type(2) > img{
-        width: 90%;
+    footer > nav{
+        width: 70%;
     }
 }

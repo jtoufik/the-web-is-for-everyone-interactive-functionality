@@ -9,7 +9,7 @@ const index = express.Router()
 
 // Overzicht
 index.get('/', (request, response) => {
-    let zoekopdracht = 'boek'
+    let zoekopdracht = 'internet'
     let booksUrl = `${process.env.API_URL}/search/?q=${zoekopdracht}&authorization=${process.env.API_KEY}&refine=true&output=json`
 
     fetchJson(booksUrl).then((data) => {
