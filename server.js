@@ -22,6 +22,7 @@ server.use(express.urlencoded({ extended: true }))
 // Stel de routes in
 server.use('/', indexRoute)
 
+
 // Start met luisteren
 server.listen(server.get('port'), () => {
     console.log(`Application started on http://localhost:${server.get('port')}`)

@@ -3,14 +3,12 @@
 <main>
     <section>
         <h2> Waar ben je naar opzoek?</h2>
-        <div>
-            <input type="text" placeholder="Ik zoek.."> 
-            <button>
-                Zoek <span class="material-symbols-outlined">
-                    arrow_right
-                    </span>
+        <form method="get" action="/home.do">
+            <input type="search" id="search-bar" placeholder="Ik zoek..." />
+            <button type="submit" name="submit">
+                Zoek <span class="material-symbols-outlined">arrow_right</span>
             </button>
-        </div>
+        </form>
     </section>
 
     <section>
@@ -34,16 +32,16 @@
                             <h3> <%= results[i].frabl.key1 %></h3> 
                             <dl>
                                 <div>
-                                    <dt>Auteur:</dt> <dd><%= results[i].frabl.key2 %></dd>
+                                    <dt>Auteur:</dt> <dd><%= results[i].authors[0] %></dd>
                                 </div>
                                 <div>
-                                    <dt>Genre:</dt>
-                                    <dd> <%= results[i].genres %></dd>
+                                    <dt>Jaar:</dt>
+                                    <dd> <%= results[i].year %></dd>
                                 </div>
                             </dl>
                         </div>                            
                         <div class="detail-box">
-                            <button class="btn-details"> Details</button>
+                            <a href="/book" class="btn-details" > Details</a>
                         </div>
                     </div>
                 </article>

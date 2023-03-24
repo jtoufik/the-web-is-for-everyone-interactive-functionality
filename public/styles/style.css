@@ -108,17 +108,17 @@ section > h2{
     font-size: 22px;
 }
 
-main > section > div{
+main > section > form{
     display: flex;
 }
 
-main > section > div > input{
+main > section > form > input{
     width: 12.5em;
     border: 1px solid var(--border-color);
     border-radius:  2px 0 0 2px;
 }
 
-main > section > div > button{
+main > section > form > button{
     color: white;
     background-color: black;
     border-style: none;
@@ -129,11 +129,11 @@ main > section > div > button{
     padding-left: 1.5em;
 }
 
-main > section > div > button:hover{
+main > section > form > button:hover{
     background-color: var(--primary-color);
 }
 
-main > section > div > button, main > section > div > input{
+main > section > form > button, main > section > form > input{
     height: 2em;
     margin: 0;
 } 
@@ -169,6 +169,7 @@ h4{
 
 h3{
     text-align: left;
+    text-transform:uppercase;
 }
 
 h4, article > p{
@@ -247,9 +248,10 @@ button, a{
     cursor: pointer;
 }
 
-button:hover{
+button:hover, .btn-details:hover{
     background-color: var(--primary-color);
     transform: scale(1.1);
+    color: white;
 }
 
 a:hover{
@@ -278,7 +280,7 @@ footer section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 70%;
+    gap: 5em;
 }
 
 .title-footer{
@@ -294,6 +296,7 @@ footer a {
 }
 
 footer h3{
+    font-size: 1.3em;
     text-align: center;
 }
 
@@ -343,6 +346,7 @@ footer > nav > div > ul{
     main > section > div > input{
         width: 14em;
     }
+
 }
 
 /* Medium screen 768px */
@@ -367,7 +371,7 @@ footer > nav > div > ul{
     }
 
     footer section{
-        width: 50%;
+        width: 60%;
     }
 
 }
@@ -407,6 +411,6 @@ footer > nav > div > ul{
     }
 
     footer > nav{
-        width: 70%;
+        width: 90%;
     }
 }
