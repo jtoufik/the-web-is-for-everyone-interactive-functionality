@@ -21,32 +21,31 @@
 
     <section>      
         <h2>Onze nieuwste aanwinsten</h2>
-
         <ul class="book-list">
-            <% for (let i= 0; i < results.length; i++){ %>
-            <li class="book-list-item">
-                <article>   
-                    <img src="<%= results[i].coverimages %>" alt="<%= results[i].frabl.key1 %>">
-                    <div>
+            <% results.forEach(result => { %>
+                <li class="book-list-item">
+                    <article>   
+                        <img src="<%= result.coverimages %>" alt="<%= result.titles %>">
                         <div>
-                            <h3> <%= results[i].frabl.key1 %></h3> 
-                            <dl>
-                                <div>
-                                    <dt>Auteur:</dt> <dd><%= results[i].authors[0] %></dd>
-                                </div>
-                                <div>
-                                    <dt>Jaar:</dt>
-                                    <dd> <%= results[i].year %></dd>
-                                </div>
-                            </dl>
-                        </div>                            
-                        <div class="detail-box">
-                            <a href="/book" class="btn-details" > Details</a>
+                            <div>
+                                <h3> <%= result.titles[0] %></h3> 
+                                <dl>
+                                    <div>
+                                        <dt>Auteur:</dt> <dd><%= result.authors[0] %></dd>
+                                    </div>
+                                    <div>
+                                        <dt>Jaar:</dt>
+                                        <dd> <%= result.year %></dd>
+                                    </div>
+                                </dl>
+                            </div>                            
+                            <div class="detail-box">
+                                <a href="/book" class="btn-details" > Details</a>
+                            </div>
                         </div>
-                    </div>
-                </article>
-            </li>
-            <% } %> 
+                    </article>
+                </li>
+            <% }) %>
         </ul>
     </section>
 
