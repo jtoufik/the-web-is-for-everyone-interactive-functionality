@@ -1,0 +1,20 @@
+.detail-section{
+    padding: 2em 0;
+    display: flex;
+    flex-flow: row;
+}
+
+.detail-book-cover{
+    width: 9em;
+    height: 14em;
+    padding: 1em;
+}
+
+h1{
+    font-size: 1.2em;
+}
+
+.btn-reserveer{
+    border: 1px solid;
+    padding: 0.5em;
+}

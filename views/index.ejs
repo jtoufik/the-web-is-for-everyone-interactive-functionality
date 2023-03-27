@@ -1,17 +1,8 @@
 <%- include('./partials/head.ejs') %>
 
 <main>
-    <section>
-        <h2> Waar ben je naar opzoek?</h2>
-        <form method="get" action="/home.do">
-            <input type="search" id="search-bar" placeholder="Titel, auteur of onderwerp" />
-            <button type="submit" name="submit">
-                Zoek <span class="material-symbols-outlined">arrow_right</span>
-            </button>
-        </form>
-    </section>
 
-    <section>
+    <section class="overview-content">
         <img src="/assets/content.png"  href="https://www.oba.nl/service/word-lid.html"> 
         <p>
             Maak kennis met verhalen in vele vormen. In jouw OBA vind je boeken om mee weg te kruipen, 
@@ -19,8 +10,8 @@
         </p>
     </section>
 
-    <section>      
-        <h2>Onze nieuwste aanwinsten</h2>
+    <section class="overview-books">      
+        <h2 class="overview-title">Onze nieuwste aanwinsten</h2>
         <ul class="book-list">
             <% results.forEach(result => { %>
                 <li class="book-list-item">

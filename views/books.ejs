@@ -1,12 +1,32 @@
 <%- include('./partials/head.ejs') %>
 
 <main>
-	<section>
+	<section class="detail-section">
+		<img class="detail-book-cover" src="<%= results[0].coverimages %>" alt="">
 		<article>
 			<h1> <%= results[0].titles[0] %></h1>
-			<img src="<%= results[0].coverimages %>" alt="">
+			<dl>
+				<div>
+					<dt>Schrijver:</dt> <dd><%= results[0].authors[0] %></dd>
+				</div>
+				<div>
+					<dt>ISBN:</dt> <dd><%= results[0].isbn %></dd>
+				</div>
+				<div>
+					<dt>Uitgever:</dt> <dd><%= results[0].publisher %></dd>
+				</div>
+				<div>
+					<dt>Genre:</dt> <dd><%= results[0]['subject-topical'][0] %></dd>
+				</div>
+				<div>
+					<dt>Taal:</dt> <dd><%= results[0].languages %></dd>
+				</div>
+			</dl>
+
+			<a href="/" class="btn-reserveer">Reserveer boek</a>
 		</article>
 	</section>
 </main>
 
 <%- include('./partials/foot.ejs') %>
+

@@ -89,6 +89,51 @@ header > nav > ul > li:hover{
     color: var(--primary-color);
 }
 
+/* Zoek balk */
+
+header > article{
+    padding-top: 1em;
+}
+.overview-title{
+    text-align: center;
+    font-size: 22px;
+}
+
+.search-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form > label{
+    padding-right: .5em;
+}
+.search-form > input{
+    width: 13.5em;
+    border: 1px solid var(--border-color);
+    border-radius:  2px 0 0 2px;
+}
+
+.search-form > button{
+    color: white;
+    background-color: black;
+    border-style: none;
+    border-radius:  0 2px 2px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1.5em;
+}
+
+.search-form > button:hover{
+    background-color: var(--primary-color);
+}
+
+.search-form > button, .search-form > input{
+    height: 2em;
+    margin: 0;
+} 
+
 /* ===================== MAIN ===================== */
 
 main{
@@ -102,55 +147,19 @@ main > section {
     align-items: center;
 }
 
-/* Zoek balk */
-section > h2{
-    text-align: center;
-    font-size: 22px;
-}
-
-main > section > form{
-    display: flex;
-}
-
-main > section > form > input{
-    width: 12.5em;
-    border: 1px solid var(--border-color);
-    border-radius:  2px 0 0 2px;
-}
-
-main > section > form > button{
-    color: white;
-    background-color: black;
-    border-style: none;
-    border-radius:  0 2px 2px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 1.5em;
-}
-
-main > section > form > button:hover{
-    background-color: var(--primary-color);
-}
-
-main > section > form > button, main > section > form > input{
-    height: 2em;
-    margin: 0;
-} 
-
 /* Section content */
 
-section:nth-of-type(2){
+.overview-content{
     margin-top: 2em;
 }
 
-section:nth-of-type(2) > img{
+.overview-content > img{
     width: 100%;
     height: auto;
     display: block;
 }
 
-section:nth-of-type(2) > p{
+.overview-content > p{
     text-align: center;
     max-width: 25em;
     font-size: 16px;
@@ -172,11 +181,6 @@ h3{
     text-transform:uppercase;
 }
 
-h4, article > p{
-    font-weight: lighter;
-    font-style: italic;
-}
-
 .book-list{
     display: flex;
     flex-flow: row;
@@ -188,7 +192,7 @@ h4, article > p{
     gap: 1em;
 }
 
-section:nth-of-type(3) article{
+.overview-books article{
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
     display: flex;
@@ -197,23 +201,23 @@ section:nth-of-type(3) article{
     padding: 1em;
 }
 
-section:nth-of-type(3) article > div{
+.overview-books article > div{
     width: 100%;
     display: flex;
     flex-flow: column;
 }
 
-section:nth-of-type(3) article > div > div:nth-last-of-type(2){
+.overview-books article > div > div:nth-last-of-type(2){
     flex-grow: 1;
 }
 
-section:nth-of-type(3) img{
+.overview-books img{
     width: 7em;
     height: 9em;
     padding-right: 1em;
 }
 
-section:nth-of-type(3) dl{
+.overview-books dl{
     padding: 0;
 }
 
