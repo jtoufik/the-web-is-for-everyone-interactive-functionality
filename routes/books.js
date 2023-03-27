@@ -12,17 +12,17 @@ const books = express.Router()
 const urlBase = "https://zoeken.oba.nl/api/v1/search/";
 const urlQuery = "?q=";
 const urlDefault = "boek";
-const urlKey = `${process.env.KEY}`;
+const urlKey = `&authorization=${process.env.API_KEY}`;
 const urlOutput = "&refine=true&output=json";
 const defaultUrl = urlBase + urlQuery + urlDefault + urlKey + urlOutput;
-
 
 // Maakt een route voor de detailpagina
 books.get("/", async (request, response) => {
 	let isbn = request.query.resultIsbn || "9789025764784";
 
-	const uniqueUrl =
-		urlBase + urlQuery + isbn + urlKey + urlOutput;
+	const uniqueUrl = urlBase + urlQuery + isbn + urlKey + urlOutput;
+
+    console.log(uniqueUrl)
 
 	const data = await fetch(uniqueUrl)
 		.then((response) => response.json())
