@@ -1,22 +1,35 @@
-// import * as dotenv from 'dotenv'
+import * as dotenv from 'dotenv'
 
-// import { fetchJson, postJson } from '../helpers/fetchWrapper.js'
+import { fetchJson, postJson } from '../helpers/fetchWrapper.js'
 
-// import express from 'express'
+import express from 'express'
 
-// dotenv.config()
+dotenv.config()
 
-// const book = express.Router()
+const books = express.Router()
 
-// // Haal de gegevens van één boek op
-// book.get('/', (request, response) => {
-//     const id = request.query.id || null
-//     const url = `${process.env.API_URL}/book/`
+// Opbouw Boeken URL van de API
+const urlBase = "https://zoeken.oba.nl/api/v1/search/";
+const urlQuery = "?q=";
+const urlDefault = "boek";
+const urlKey = `${process.env.KEY}`;
+const urlOutput = "&refine=true&output=json";
+const defaultUrl =
+	urlBase + urlQuery + urlDefault + urlKey + urlOutput;
 
-//     fetchJson(url).then((data) => {
-//         response.render('book', data)
-//     })
-// })
 
+// Maakt een route voor de detailpagina
+books.get("/book", async (request, response) => {
+	let isbn = request.query.resultIsbn || "9789045117621";
 
-// export default book
+	const uniqueUrl =
+		urlBase + urlQuery + isbn + urlKey + urlOutput;
+
+	const data = await fetch(uniqueUrl)
+		.then((response) => response.json())
+		.catch((err) => err);
+	response.render("book", data);
+
+});
+
+export default books

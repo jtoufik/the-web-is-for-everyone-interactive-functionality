@@ -33,7 +33,7 @@ header{
 header > section{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 header > section > img:nth-of-type(1){
