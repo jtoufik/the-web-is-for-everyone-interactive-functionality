@@ -18,3 +18,8 @@ h1{
     border: 1px solid;
     padding: 0.5em;
 }
+
+.detail-section > article{
+    border: 1px solid black;
+    padding: 0 1em 2em;
+}
