@@ -4,7 +4,7 @@
     <section>
         <h2> Waar ben je naar opzoek?</h2>
         <form method="get" action="/home.do">
-            <input type="search" id="search-bar" placeholder="Ik zoek..." />
+            <input type="search" id="search-bar" placeholder="Titel, auteur of onderwerp" />
             <button type="submit" name="submit">
                 Zoek <span class="material-symbols-outlined">arrow_right</span>
             </button>
@@ -22,6 +22,7 @@
     <section>      
         <h2>Onze nieuwste aanwinsten</h2>
         <ul class="book-list">
+            <% console.log(results) %>
             <% results.forEach(result => { %>
                 <li class="book-list-item">
                     <article>   
@@ -40,7 +41,7 @@
                                 </dl>
                             </div>                            
                             <div class="detail-box">
-                                <a href="/book" class="btn-details" > Details</a>
+                                <a href="/books" class="btn-details" > Details</a>
                             </div>
                         </div>
                     </article>

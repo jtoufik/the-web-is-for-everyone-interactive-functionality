@@ -1,5 +1,6 @@
 import express from 'express'
 import indexRoute from './routes/index.js'
+import booksRoute from './routes/books.js'
 
 // Maak een nieuwe express app
 const server = express()
@@ -21,6 +22,7 @@ server.use(express.urlencoded({ extended: true }))
 
 // Stel de routes in
 server.use('/', indexRoute)
+server.use('/books', booksRoute)
 
 
 // Start met luisteren

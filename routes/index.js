@@ -14,7 +14,7 @@ index.get('/', (request, response) => {
 
     fetchJson(booksUrl).then((data) => {
     response.render('index', data)
-        console.log(data)
+        console.log(booksUrl)
     })
 })
 
