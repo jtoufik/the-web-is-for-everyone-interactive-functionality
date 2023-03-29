@@ -2,24 +2,33 @@
     padding: 2em 0;
     display: flex;
     flex-flow: row;
+    align-items: flex-start;
 }
 
 .detail-book-cover{
-    width: 9em;
-    height: 14em;
-    padding: 1em;
+    padding: 0 0.5em;
 }
+
 
 h1{
     font-size: 1.2em;
+    margin: 0;
 }
 
-.btn-reserveer{
+.container-btn-reserve{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-reserve{
     border: 1px solid;
     padding: 0.5em;
 }
 
 .detail-section > article{
-    border: 1px solid black;
-    padding: 0 1em 2em;
+    padding: 0 0 1.5em 0.2em;
+}
+
+dt{
+    min-width: 5em;
 }
