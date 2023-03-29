@@ -1,0 +1,15 @@
+<%- include('./partials/head.ejs') %>
+
+<main>
+    <section>
+        <fieldset>
+            <legend>Reserveer je boek</legend>
+            <form action="/books" method="post">
+                <label for="name">name:</label>
+                <input type="text" name="name" id="name" placeholder="..." value="" />
+            </form>
+        </fieldset>
+    </section>
+</main>
+
+<%- include('./partials/foot.ejs') %>
