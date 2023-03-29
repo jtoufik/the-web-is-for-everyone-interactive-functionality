@@ -1,12 +1,18 @@
 <%- include('./partials/head.ejs') %>
 
-<main>
-    <section>
+<main class="form-main">
+    <section class="form-section">
         <fieldset>
             <legend>Reserveer je boek</legend>
-            <form action="/books" method="post">
-                <label for="name">name:</label>
-                <input type="text" name="name" id="name" placeholder="..." value="" />
+
+            <form action="/books/new" method="post" autocomplete="on">
+                <label for="obaId">Oba-id:</label>
+                <input type="text" name="obaId" id="obaId" placeholder="..." value="<%= locals.reservations?.obaId ?? '' %>" />
+                <label for="userName">Gebruikersnaam:</label>
+                <input type="text" name="userName" id="userName" placeholder="..." value="<%= locals.reservations?.userName ?? '' %>" />
+                <label for="date">datum</label>
+                <input required id="date" type="date" name="date" value="<%= locals.reservations?.date ?? '' %>"/>
+                <button>Bevestig</button>
             </form>
         </fieldset>
     </section>

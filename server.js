@@ -8,7 +8,6 @@ const server = express()
 // Stel het poortnummer in
 server.set('port', process.env.PORT || 8000)
 
-
 // Stel de view engine in
 server.set('view engine', 'ejs')
 server.set('views', './views')
