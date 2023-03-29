@@ -1,5 +1,5 @@
 .detail-section{
-    padding: 2em 0;
+    padding: 4em 0;
     display: flex;
     flex-flow: row;
     align-items: flex-start;
@@ -16,13 +16,24 @@ h1{
 }
 
 .container-btn-reserve{
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .btn-reserve{
-    border: 1px solid;
-    padding: 0.5em;
+    padding: 0.2em 3em;
+    position: relative;
+    top: 1em;
+    color: white;
+    background-color: black;
+    border-radius:  0 2px 2px 0;
+    text-decoration: none;
+}
+
+.btn-reserve:hover{
+    background-color: red;
+    color: white;
 }
 
 .detail-section > article{
@@ -31,4 +42,35 @@ h1{
 
 dt{
     min-width: 5em;
+}
+
+
+
+/* Medium screen 768px */
+@media (min-width: 48em) {
+
+    .detail-section > article {
+        padding-left: 3em;
+    }
+
+    dt {
+        min-width: 6em;
+    }
+
+}
+
+/* Large screen 1120px */
+@media (min-width: 70em) {
+
+    .detail-section{
+        padding: 6em 0;
+    }
+
+    .detail-book-cover {
+        width: 12em;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
 }
