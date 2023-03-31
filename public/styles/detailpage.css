@@ -44,7 +44,16 @@ dt{
     min-width: 5em;
 }
 
+.summary{
+    padding-top: 1.5em;
+}
 
+/* Small screen 480px */
+@media (min-width: 30em) {
+    dt {
+        min-width: 7em;
+    }
+}
 
 /* Medium screen 768px */
 @media (min-width: 48em) {
@@ -54,7 +63,7 @@ dt{
     }
 
     dt {
-        min-width: 6em;
+        min-width: 8em;
     }
 
 }

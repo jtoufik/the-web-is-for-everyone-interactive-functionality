@@ -10,9 +10,6 @@
 					<dt>Schrijver:</dt> <dd><%= results[0].authors[0] %></dd>
 				</div>
 				<div>
-					<dt>ISBN:</dt> <dd><%= results[0].isbn %></dd>
-				</div>
-				<div>
 					<dt>Uitgever:</dt> <dd><%= results[0].publisher %></dd>
 				</div>
 				<div>
@@ -20,6 +17,9 @@
 				</div>
 				<div>
 					<dt>Taal:</dt> <dd><%= results[0].languages %></dd>
+				</div>
+				<div>
+					<dt>Samenvatting:</dt> <dd class="summary"><%= results[0].summaries[0] %></dd>
 				</div>
 				<div class="container-btn-reserve">
 					<a href="/books/new?id=<%= results[0].isbn %>" class="btn-reserve">Reserveer boek</a>

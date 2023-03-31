@@ -6,3 +6,10 @@
 .form-section{
     margin: 2em;
 }
+
+.form-main form{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: .5em;
+}
