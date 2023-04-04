@@ -2,6 +2,9 @@
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
+<img width="1005" alt="Scherm­afbeelding 2023-04-04 om 11 53 29" src="https://user-images.githubusercontent.com/112856590/229756104-833fecff-fe79-43dd-b207-50262cee3639.png">
+
+
 ## Inhoudsopgave
 
 - [Beschrijving](#beschrijving)
