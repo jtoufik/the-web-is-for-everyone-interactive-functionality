@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv'
 import { fetchJson, postJson } from '../helpers/fetchWrapper.js'
 
 import express from 'express'
+import e from 'express'
 
 dotenv.config()
 
@@ -31,9 +32,9 @@ books.get('/', async (request, response) => {
 // Maakt een route voor de reserveringspagina
 books.get('/new', (request, response) => {
 
-    const baseurl = 'https://api.oba.fdnd.nl/api/v1'
+    const reserveUrl = 'https://api.oba.fdnd.nl/api/v1'
 
-    const url = `${baseurl}/reserveringen`
+    const url = `${reserveUrl}/reserveringen`
 
 	fetchJson(url).then((data) => {
 		response.render('reserveForm.ejs')
@@ -44,6 +45,11 @@ books.get('/new', (request, response) => {
 	})
 })
 
+// books.get('/reserveoverview', (request, response) => {
+// 	response.render('reserveOverview.ejs')
+// })
+
+
 // Verstuurt de data naar de API
 books.post('/new', (request, response) => {
     const baseurl = 'https://api.oba.fdnd.nl/api/v1'
@@ -51,17 +57,19 @@ books.post('/new', (request, response) => {
 
     postJson(url, request.body).then((data) => {
         let newReservation = { ...request.body }
-
+		console.log("0");
         if (data.success) {
-            response.redirect('/?reserveringenPosted=true')
+			console.log("1");
+            response.redirect('/reserveOverview')
         } else {
-            const errormessage = `${data.message}: Mogelijk komt dit door het id die al bestaat.`
+            const errormessage = `${data.message}: Mogelijk al een bestaande ID gebruikt.`
+			console.log("2");
             const newdata = {
                 error: errormessage,
                 values: newReservation,
             };
 
-            response.render('reserveForm', newdata)
+            response.render('reserveOverview', newdata)
         }
 
         console.log(JSON.stringify(data.errors))
