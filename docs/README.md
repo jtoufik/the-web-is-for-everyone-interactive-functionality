@@ -1,4 +1,4 @@
-# OBA Progressive Enhancement Website
+# OBA - Web is for everyone 
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
