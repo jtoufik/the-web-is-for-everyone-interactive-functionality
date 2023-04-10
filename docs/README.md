@@ -1,4 +1,4 @@
-# OBA - Web is for everyone 
+# OBA - The web is for everyone 
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
