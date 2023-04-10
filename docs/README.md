@@ -37,6 +37,8 @@ Voor dit project heb ik gebruik gemaakt van de packages Node/EJS en Express. Dit
 
 ## Gebruik
 
+Met deze website kan een gebruiker een boek reserveren. De data die de gebruiker invult komt ook daadwerkelijk op de API terecht. https://api.oba.fdnd.nl/api/v1/reserveringen
+
 **Userstory:** [Als gebruiker wil ik een boek zoeken en kunnen reserveren, zodat ik het later op kan halen #24](https://github.com/fdnd-agency/oba/issues/24)
 
 In dit project heb ik het voor elkaar gekregen dat een gebruiker een boek kan selecteren uit de API van OBA. Vervolgens kan de gebruiker een boek reserveren die ook word gepost naar de API. 
